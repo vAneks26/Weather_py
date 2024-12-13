@@ -1,7 +1,2 @@
-{"coord": {"lon": 37.6156, "lat": 55.7522}, "weather": [{"id": 600, "main": "Snow", "description": "light snow", "icon": "13n"}], "base": "stations", "main": {"temp": -0.74, "feels_like": -2.52, "temp_min": -1.76, "temp_max": -0.74, "pressure": 1032, "humidity": 65, "sea_level": 1032, "grnd_level": 1012}, "visibility": 229, "wind": {"speed": 1.45, "deg": 324, "gust": 4.39}, "snow": {"1h": 0.38}, "clouds": {"all": 100}, "dt": 1733768016, "sys": {"type": 2, "id": 2095214, "country": "RU", "sunrise": 1733723221, "sunset": 1733749033}, "timezone": 10800, "id": 524901, "name": "Moscow", "cod": 200, "timestamp": "2024-12-09T21:20:50.391792"}
-{"city": "Moscow", "temperature": -4.76, "timestamp": "2024-12-10T19:53:16.763243"}
-{"city": "Volgograd", "temperature": 0.43, "timestamp": "2024-12-10T20:00:45.605879"}
-{"city": "Moscow", "temperature": -5, "timestamp": "2024-12-10T20:04:37.208903"}
-{"city": "Volgograd", "temperature": 0, "timestamp": "2024-12-10T20:07:20.448399"}
-{"city": "Moscow", "temperature": -5, "timestamp": "2024-12-10T20:07:46.420433"}
-{"city": "Moscow", "temperature": -5, "timestamp": "2024-12-10T20:07:56.693089"}
+{"city": "Moscow", "temperature": -6, "timestamp": "2024-12-13T16:18:37.435514"}
+{"city": {"city": {"city": {"city": {"city": "Volgograd", "temperature": -5, "timestamp": "2024-12-13T17:00:13.911823"}

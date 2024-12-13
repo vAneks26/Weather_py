@@ -1,0 +1,28 @@
+2024-12-13 15:51:27,332 - INFO - Starting the weather logger...
+2024-12-13 15:51:37,682 - INFO - Weather data fetched and saved: {'city': 'Moscow', 'temperature': -6, 'timestamp': '2024-12-13T15:51:37.680574'}
+2024-12-13 15:51:47,933 - INFO - Weather data fetched and saved: {'city': 'Moscow', 'temperature': -6, 'timestamp': '2024-12-13T15:51:47.932488'}
+2024-12-13 16:03:09,318 - ERROR - Error fetching weather data: HTTP Error
+2024-12-13 16:03:09,329 - INFO - Weather data fetched and saved: {'city': 'TestCity', 'temperature': 26, 'timestamp': '2024-01-01T12:00:00'}
+2024-12-13 16:04:14,099 - ERROR - Error fetching weather data: HTTP Error
+2024-12-13 16:04:14,110 - INFO - Weather data fetched and saved: {'city': 'TestCity', 'temperature': 26, 'timestamp': '2024-01-01T12:00:00'}
+2024-12-13 16:06:18,421 - ERROR - Error fetching weather data: HTTP Error
+2024-12-13 16:06:18,432 - INFO - Weather data fetched and saved: {'city': 'TestCity', 'temperature': 26, 'timestamp': '2024-01-01T12:00:00'}
+2024-12-13 16:06:54,924 - ERROR - Error fetching weather data: HTTP Error
+2024-12-13 16:06:54,934 - INFO - Weather data fetched and saved: {'city': 'TestCity', 'temperature': 26, 'timestamp': '2024-01-01T12:00:00'}
+2024-12-13 16:08:15,718 - ERROR - Error fetching weather data: HTTP Error
+2024-12-13 16:08:15,728 - INFO - Weather data fetched and saved: {'city': 'Moscow', 'temperature': 26, 'timestamp': '2024-01-01T12:00:00'}
+2024-12-13 16:18:10,722 - ERROR - Error fetching weather data: 404 Client Error: Not Found for url: https://api.openweathermap.org/data/2.5/weather?q=Test+City&appid=d7268901c56fc9ce3a71ead8a4dbff42&units=metric
+2024-12-13 16:18:10,736 - INFO - Weather data fetched and saved: {'city': '', 'temperature': 24, 'timestamp': '2024-12-13T16:18:10.735625'}
+2024-12-13 16:18:11,116 - ERROR - Error fetching weather data: 404 Client Error: Not Found for url: https://api.openweathermap.org/data/2.5/weather?q=Test+City&appid=d7268901c56fc9ce3a71ead8a4dbff42&units=metric
+2024-12-13 16:18:37,211 - INFO - Weather data fetched and saved: {'city': 'Moscow', 'temperature': -6, 'timestamp': '2024-12-13T16:18:37.211590'}
+2024-12-13 16:18:37,224 - INFO - Weather data fetched and saved: {'city': '', 'temperature': 24, 'timestamp': '2024-12-13T16:18:37.223722'}
+2024-12-13 16:18:37,435 - INFO - Weather data fetched and saved: {'city': 'Moscow', 'temperature': -6, 'timestamp': '2024-12-13T16:18:37.435514'}
+2024-12-13 16:45:50,616 - ERROR - Error fetching weather data: 400 Client Error: Bad Request for url: https://api.openweathermap.org/data/2.5/weather?q=&appid=d7268901c56fc9ce3a71ead8a4dbff42&units=metric
+2024-12-13 16:45:50,637 - INFO - Weather data fetched and saved: {'city': 'Moscow', 'temperature': 24, 'timestamp': '2024-12-13T16:45:50.637150'}
+2024-12-13 16:46:06,284 - ERROR - Error fetching weather data: HTTPSConnectionPool(host='api.openweathermap.org', port=443): Max retries exceeded with url: /data/2.5/weather?q=&appid=d7268901c56fc9ce3a71ead8a4dbff42&units=metric (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1000)')))
+2024-12-13 16:46:06,314 - INFO - Weather data fetched and saved: {'city': '', 'temperature': 24, 'timestamp': '2024-12-13T16:46:06.314393'}
+2024-12-13 16:58:07,636 - ERROR - Error fetching weather data: HTTP Error
+2024-12-13 16:59:36,589 - ERROR - Error fetching weather data: HTTP Error
+2024-12-13 17:00:03,576 - INFO - Starting the weather logger...
+2024-12-13 17:00:13,913 - INFO - Weather data fetched and saved: {'city': 'Volgograd', 'temperature': -5, 'timestamp': '2024-12-13T17:00:13.911823'}
+2024-12-13 17:05:00,977 - INFO - Weather data fetched and saved: {'city': 'TestCity', 'temperature': 25, 'timestamp': '2023-01-01T12:00:00'}

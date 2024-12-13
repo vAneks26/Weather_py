@@ -1,8 +1,17 @@
-import requests  # Для выполнения HTTP-запросов
-import json      # Для работы с JSON-данными
-from datetime import datetime  # Для добавления временных меток
-import schedule  # Для создания расписания задач
-import time      # Для функции задержки выполнения
+import requests
+import json
+from datetime import datetime
+import schedule
+import time
+import logging
+
+# Настройка логирования
+LOG_FILE = "weather_log.txt"
+logging.basicConfig(
+    filename=LOG_FILE,
+    level=logging.INFO,
+    format='%(asctime)s - %(levelname)s - %(message)s'
+)
 
 # URL API сервиса погоды OpenWeather
 API_URL = "https://api.openweathermap.org/data/2.5/weather"
@@ -18,7 +27,7 @@ FILE_PATH = "weather_data.json"
 
 def fetch_weather():
     """
-Получает данные о погоде с сайта OpenWeather и записывает город, температуру и время в файл.
+    Получает данные о погоде с сайта OpenWeather и записывает город, температуру и время в файл.
     """
     try:
         # Параметры запроса к API
@@ -44,7 +53,6 @@ def fetch_weather():
             "timestamp": datetime.now().isoformat()
         }
 
-
         # Открываем файл в режиме добавления (append)
         with open(FILE_PATH, "a") as file:
             # Сериализуем данные в строку JSON и записываем в файл
@@ -52,18 +60,21 @@ def fetch_weather():
             # Добавляем перенос строки для разделения записей
             file.write("\n")
 
-        # Уведомляем пользователя, что данные успешно сохранены
+        # Логируем успешное выполнение
+        logging.info(f"Weather data fetched and saved: {log_entry}")
         print(f"[{datetime.now()}] Weather data fetched and saved successfully.")
 
     except requests.exceptions.RequestException as e:
-        # Обрабатываем ошибки HTTP-запроса и выводим сообщение
-        print(f"[{datetime.now()}] Error fetching weather data: {e}")
+        # Логируем ошибки HTTP-запроса
+        logging.error(f"Error fetching weather data: {e}")
+      #  print(f"[{datetime.now()}] Error fetching weather data: {e}")
 
 # Планируем выполнение задачи раз в минуту
 schedule.every(10).seconds.do(fetch_weather)
 
 if __name__ == "__main__":
     # Запускаем цикл планировщика
+    logging.info("Starting the weather logger...")
     print("Starting the weather logger...")
     while True:
         # Выполняем запланированные задачи
