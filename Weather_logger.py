@@ -16,7 +16,7 @@ logging.basicConfig(
 # URL API сервиса погоды OpenWeather
 API_URL = "https://api.openweathermap.org/data/2.5/weather"
 
-# Ваш API-ключ для доступа к OpenWeather (замените на свой)
+# Ваш API-ключ для доступа к OpenWeather
 API_KEY = "d7268901c56fc9ce3a71ead8a4dbff42"
 
 # Город, для которого запрашиваем погоду
@@ -53,12 +53,13 @@ def fetch_weather():
             "timestamp": datetime.now().isoformat()
         }
 
-        # Открываем файл в режиме добавления (append)
+        # Открываем файл в режиме добавления
         with open(FILE_PATH, "a") as file:
-            # Сериализуем данные в строку JSON и записываем в файл
-            json.dump(log_entry, file)
-            # Добавляем перенос строки для разделения записей
-            file.write("\n")
+            file.write(json.dumps(log_entry) + "\n")
+            # # Сериализуем данные в строку JSON и записываем в файл
+            # json.dump(log_entry, file)
+            # # Добавляем перенос строки для разделения записей
+            # file.write("\n")
 
         # Логируем успешное выполнение
         logging.info(f"Weather data fetched and saved: {log_entry}")
@@ -69,7 +70,7 @@ def fetch_weather():
         logging.error(f"Error fetching weather data: {e}")
       #  print(f"[{datetime.now()}] Error fetching weather data: {e}")
 
-# Планируем выполнение задачи раз в минуту
+# Планируем выполнение задачи раз в10ctr
 schedule.every(10).seconds.do(fetch_weather)
 
 if __name__ == "__main__":
